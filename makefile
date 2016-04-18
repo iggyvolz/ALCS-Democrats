@@ -1,5 +1,10 @@
-all: index blog
+all: mkdir index blog css
+mkdir:
+	rm -Rf build
+	mkdir -p build
 index:
-	php index.php > index.html
+	php index.php > build/index.html
 blog:
-	php blog.php > blog.html
+	php blog.php > build/blog.html
+css:
+	cp main.css build/main.css
