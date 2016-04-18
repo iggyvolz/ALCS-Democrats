@@ -1,5 +1,5 @@
 hash:=$(shell git rev-parse --short HEAD)
-all: mkdir index blog donate css pages
+all: mkdir index blog donate css
 mkdir:
 	rm -Rf build
 	mkdir -p build
@@ -11,5 +11,5 @@ donate:
 	php donate.php > build/donate.html
 css:
 	cp main.css build/main.css
-pages:
+push: all
 	git checkout gh-pages && mv build/* . && git add * && git commit -m "Update to $(hash)" && git push && git checkout master || git checkout master
