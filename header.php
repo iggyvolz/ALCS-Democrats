@@ -1,8 +1,8 @@
 <?php
-define("BASE","/ALCS-Republicans/build");
+define("BASE","/ALCS-Democrats/build");
 function do_header($this)
 {
-    $pages=["index.html"=>"Home","blog.html"=>"Blog"];
+    $pages=["index.html"=>"Home","blog.html"=>"Blog","donate.html"=>"Donate"];
     ?><html>
     <head>
         <title>Bernie Sanders 2016</title>
