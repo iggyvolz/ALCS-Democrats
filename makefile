@@ -12,4 +12,4 @@ donate:
 css:
 	cp main.css build/main.css
 pages:
-	git checkout gh-pages && mv build/* . && git commit -m "Update to $(hash)" && git push
+	git checkout gh-pages && mv build/* . && git commit -m "Update to $(hash)" && git push && git checkout master
