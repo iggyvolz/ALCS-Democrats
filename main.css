@@ -7,7 +7,7 @@ body
     width:30%;
     display:block;
     margin-left:auto;
-    margin-right:auto
+    margin-right:auto;
 }
 #berniesanders2016
 {
@@ -17,8 +17,13 @@ body
 #navbar
 {
     list-style-type: none;
-    margin: 0;
     padding: 0;
+}
+#navbar li
+{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
 }
 #navbar li a
 {
@@ -44,4 +49,16 @@ body
 #introduction p
 {
     text-align:center;
+}
+.blogtitle
+{
+    color:white;
+}
+.blogdate
+{
+    color:white;
+}
+.blogtext
+{
+    color:white;
 }
