@@ -1,4 +1,4 @@
-<?php require "header.php"; do_header("Donate",'$("#custombutton").click(function(){$("#custombutton").hide();$("#customamount").show();$("#customamount").focus();$("#customamount").val("$")});$("#customamount").keydown(function(){setTimeout(function(){if($("#customamount").val()[0]!=="$"){$("#customamount").val("$"+$("#customamount").val())}},1)})');
+<?php require "header.php"; do_header("Donate",'$("#custombutton").click(function(){$(".selected").removeClass("selected");$("#custombutton").hide();$("#customamount").show();$("#customamount").focus();});$(".amount").click(function(){$(".selected").removeClass("selected");$(this).addClass("selected");$("#custombutton").show();$("#customamount").hide()})');
 define("DONATION_AMOUNTS",serialize([5,10,20,100,null]));
 ?>
 <?php
@@ -6,7 +6,7 @@ define("DONATION_AMOUNTS",serialize([5,10,20,100,null]));
     {
         if(is_null($amount))
         {
-            echo "<input type=\"text\" class=\"hidden\" id=\"customamount\"></input><button id=\"custombutton\">$?</button>";
+            echo "<input type=\"number\" class=\"hidden\" id=\"customamount\"></input><button id=\"custombutton\">$?</button>";
         }
         else
         {
