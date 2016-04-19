@@ -67,3 +67,11 @@ body
     text-align:center;
     color:white;
 }
+#customamount
+{
+    width:50px;
+}
+.hidden
+{
+    display:none;
+}

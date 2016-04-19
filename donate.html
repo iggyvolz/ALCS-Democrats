@@ -2,9 +2,16 @@
     <head>
         <title>Bernie Sanders 2016</title>
         <link rel="stylesheet" href="main.css" type="text/css" />
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+        <script>
+            /* global $ */
+            $(function(){
+                $("#custombutton").click(function(){$("#custombutton").hide();$("#customamount").show();$("#customamount").focus();$("#customamount").val("$")});$("#customamount").keydown(function(){setTimeout(function(){if($("#customamount").val()[0]!=="$"){$("#customamount").val("$"+$("#customamount").val())}},1)})            });
+        </script>
     </head>
     <body>
         <ul id="navbar">
-            <li><a href="/ALCS-Democrats/build/index.html">Home</a></li><li><a href="/ALCS-Democrats/build/blog.html">Blog</a></li><li><a href="/ALCS-Democrats/build/donate.html" class="active">Donate</a></li>        </ul><p id="disclaimer">NOTE: This website was made for a school project.  This website does not serve as an official endorsement for any candidate or party, nor a prediction of events to come.</p>
+            <li><a href="index.html">Home</a></li><li><a href="blog.html">Blog</a></li><li><a href="donate.html" class="active">Donate</a></li>        </ul><button class="amount">$5</button><button class="amount">$10</button><button class="amount">$20</button><button class="amount">$100</button><input type="text" class="hidden" id="customamount"></input><button id="custombutton">$?</button></ul>
+<p id="disclaimer">NOTE: This website was made for a school project.  This website does not serve as an official endorsement for any candidate or party, nor a prediction of events to come.</p>
 </body>
 </html>
