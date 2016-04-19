@@ -1,5 +1,5 @@
 hash:=$(shell git rev-parse --short HEAD)
-all: mkdir index blog donate css js
+all: mkdir index blog donate css
 mkdir:
 	rm -Rf build
 	mkdir -p build
