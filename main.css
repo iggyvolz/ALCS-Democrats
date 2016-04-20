@@ -20,6 +20,7 @@ body
 {
     list-style-type: none;
     padding: 0;
+    float:left;
 }
 #navbar li
 {
@@ -88,4 +89,9 @@ body
 .state
 {
     color:white;
+}
+#fblogo
+{
+    float:right;
+    width:20px;
 }
