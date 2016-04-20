@@ -35,5 +35,6 @@ function do_header($this,$script="")
                 }
                 echo "<li><a href=\"$page\"".$class.">$name</a></li>";
             }?>
-        </ul><?php
+        </ul>
+        <a href="http://classtools.net/FB/1554-tGTjkU"><img src="http://images.all-free-download.com/images/graphicthumb/facebook_93482.jpg" id="fblogo" /></a><?php
 }
