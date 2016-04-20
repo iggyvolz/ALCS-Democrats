@@ -4,14 +4,22 @@
         <link rel="stylesheet" href="main.css" type="text/css" />
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
         <script>
+        window.variables=[]
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i=0;i<vars.length;i++) {
+            var pair = vars[i].split("=");
+            window.variables[pair[0]]=pair[1];
+        }
+
             /* global $ */
             $(function(){
-                $("#custombutton").click(function(){$(".selected").removeClass("selected");$("#custombutton").hide();$("#customamount").show();$("#customamount").focus();});$(".amount").click(function(){$(".selected").removeClass("selected");$(this).addClass("selected");$("#custombutton").show();$("#customamount").hide()})            });
+                $("#custombutton").click(function(){$("#submit").prop("disabled",false);$(".selected").removeClass("selected");$("#custombutton").hide();$("#customamount").show();$("#customamount").focus();});$(".amount").click(function(){$("#submit").prop("disabled",false);$(".selected").removeClass("selected");$(this).addClass("selected");$("#custombutton").show();$("#customamount").hide()});$("#submit").click(function(){alert("Thank you for your donation!");window.location="index.html"})            });
         </script>
     </head>
     <body>
         <ul id="navbar">
-            <li><a href="index.html">Home</a></li><li><a href="blog.html">Blog</a></li><li><a href="donate.html" class="active">Donate</a></li>        </ul><button class="amount">$5</button><button class="amount">$10</button><button class="amount">$20</button><button class="amount">$100</button><input type="number" class="hidden" id="customamount"></input><button id="custombutton">$?</button></ul>
+            <li><a href="index.html">Home</a></li><li><a href="blog.html">Blog</a></li><li><a href="donate.html" class="active">Donate</a></li><li><a href="register.html">Register</a></li><li><a href="join.html">Join</a></li>        </ul><button class="amount">$5</button><button class="amount">$10</button><button class="amount">$20</button><button class="amount">$100</button><input type="number" class="hidden" id="customamount"></input><button id="custombutton">$?</button><p><button disabled id="submit">Submit</button></p>
 <p id="disclaimer">NOTE: This website was made for a school project.  This website does not serve as an official endorsement for any candidate or party, nor a prediction of events to come.</p>
 </body>
 </html>

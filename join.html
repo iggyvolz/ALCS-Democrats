@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Bernie Sanders 2016</title>
+        <link rel="stylesheet" href="main.css" type="text/css" />
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+        <script>
+        window.variables=[]
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i=0;i<vars.length;i++) {
+            var pair = vars[i].split("=");
+            window.variables[pair[0]]=pair[1];
+        }
+
+            /* global $ */
+            $(function(){
+                $("#submit").click(function(){alert("Thank you for joining to help Bernie Sanders!");window.location="index.html"})            });
+        </script>
+    </head>
+    <body>
+        <ul id="navbar">
+            <li><a href="index.html">Home</a></li><li><a href="blog.html">Blog</a></li><li><a href="donate.html">Donate</a></li><li><a href="register.html">Register</a></li><li><a href="join.html" class="active">Join</a></li>        </ul><div id="berniesanders2016">Join the Cause!</div>
+<p>Bernie Sanders is amazing, but he can't win the election without your help.</p>
+<p>There are many ways to volunteer your time, including:</p>
+<ul>
+    <li>Run a voter registration station</li>
+    <li>Hand out Sanders buttons and stickers</li>
+    <li>Volunteer at a Sanders rally</li>
+</ul>
+    <p><label for="firstname">First Name: </label><input type="text" id="firstname" name="firstname"></input></p>
+    <p><label for="lastname">Last Name: </label><input type="text" id="lastname" name="lastname"></input></p>
+    <p><label for="zip">Zip Code: </label><input type="text" id="zip" name="zip"></input></p>
+    <p>What would you be willing to volunteer for?</p>
+    <p><input type="checkbox" id="registration" name="registration" value="y"></input><label for="registration">Run a voter registration station</label></p>
+    <p><input type="checkbox" id="handout" name="handout" value="y"></input><label for="handout">Hand out Sanders buttons and stickers</label></p>
+    <p><input type="checkbox" id="volunteer" name="volunteer" value="y"></input><label for="volunteer">Volunteer at a Sanders rally</label></p>
+    <p><button id="submit">Submit</button></p>
+<p id="disclaimer">NOTE: This website was made for a school project.  This website does not serve as an official endorsement for any candidate or party, nor a prediction of events to come.</p>
+</body>
+</html>
