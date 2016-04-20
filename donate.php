@@ -1,4 +1,4 @@
-<?php require "header.php"; do_header("Donate",'$("#custombutton").click(function(){$(".selected").removeClass("selected");$("#custombutton").hide();$("#customamount").show();$("#customamount").focus();});$(".amount").click(function(){$(".selected").removeClass("selected");$(this).addClass("selected");$("#custombutton").show();$("#customamount").hide()})');
+<?php require "header.php"; do_header("Donate",'$("#custombutton").click(function(){$("#submit").prop("disabled",false);$(".selected").removeClass("selected");$("#custombutton").hide();$("#customamount").show();$("#customamount").focus();});$(".amount").click(function(){$("#submit").prop("disabled",false);$(".selected").removeClass("selected");$(this).addClass("selected");$("#custombutton").show();$("#customamount").hide()});$("#submit").click(function(){alert("Thank you for your donation!");window.location="index.html"})');
 define("DONATION_AMOUNTS",serialize([5,10,20,100,null]));
 ?>
 <?php
@@ -14,5 +14,5 @@ define("DONATION_AMOUNTS",serialize([5,10,20,100,null]));
         }
     }
 ?>
-</ul>
+<p><button disabled id="submit">Submit</button></p>
 <?php require "footer.php";
