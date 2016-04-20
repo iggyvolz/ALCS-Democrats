@@ -44,11 +44,11 @@ body
 {
     background-color:black;
 }
-#introduction
+body
 {
     color:white;
 }
-#introduction p
+.center
 {
     text-align:center;
 }
@@ -80,4 +80,12 @@ body
 .selected
 {
   color:blue;
+}
+.registerintro
+{
+    color:white;
+}
+.state
+{
+    color:white;
 }
