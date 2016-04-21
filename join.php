@@ -1,7 +1,7 @@
 <?php
 require "header.php"; do_header("Join",'$("#submit").click(function(){alert("Thank you for joining to help Bernie Sanders!");window.location="index.html"})');
 ?>
-<div id="berniesanders2016">Join the Cause!</div>
+<img src="http://www.betterworld.net/quotes/bernie/tweets/Bernie-PoliticalRevolution6.png" id="bernieimg"></img>
 <p>Bernie Sanders is amazing, but he can't win the election without your help.</p>
 <p>There are many ways to volunteer your time, including:</p>
 <ul>
