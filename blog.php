@@ -16,7 +16,7 @@ new blogpost("Bernie Sanders Chooses Hillary Clinton as Running Mate","6/9/2016 
 <div id="blogpost">
     <?php foreach($blogposts as $n=>$blogpost)
     {
-        list($title,$date,$contents)=[$blogpost->title,$blogpost->date->format("l, F j Y - g:i A \E\D\T"),$blogpost->contents];
+        list($title,$date,$contents)=[$blogpost->title,$blogpost->date->format("l, F j, Y - g:i A \E\D\T"),$blogpost->contents];
         echo "<h3 class=\"blogtitle\">$title</h3><h4 class=\"blogdate\">$date</h4><p class=\"blogtext\">$contents</p>";
     }?>
 </div>
